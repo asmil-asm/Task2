@@ -1,10 +1,9 @@
 import Navbar from "./Navbar"
 import Homebutton from "./Homebutton"
 export default function Admin(){
-  
     return(
         <>
-        <Navbar name={'Logout'}/>
+        <Navbar name={'Logout'} />
         <div className="admin">
             <h1> Admin:Mohammed Shaheen</h1>
             <h2>Dashboard</h2>

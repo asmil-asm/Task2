@@ -1,12 +1,13 @@
 import Navbar from "./Navbar"
 import Homebutton from "./Homebutton"
+import { Link } from "react-router-dom"
 
 
 export default function User(){
-   
+  
     return(
         <>
-        <Navbar name={'Logout'} />
+        <Navbar name={'Logout'}/>
         <div className="user">
 <h1>Asmail Shaheen</h1>
 <h2>Frontend developer </h2>

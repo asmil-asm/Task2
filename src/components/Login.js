@@ -7,13 +7,14 @@ let [user,setUser]=useState(null);
     let auth=useAuth();
     let navigate=useNavigate();
     const handleUser=()=>{
-   auth.login(user);
+   auth.login(user)
+   if(user!=null)
          navigate('/user',{replace:true});
-   
        
     }
    const handleAdmin=()=>{
      auth.login(user);
+        if(user!=null)
          navigate('/admin',{replace:true});
    }
   

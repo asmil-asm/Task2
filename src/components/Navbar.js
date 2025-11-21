@@ -1,16 +1,23 @@
 import '../App.css'
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 import { useAuth } from '../Context/Auth'
 
+
 export default function Navbar({name}){
-  let auth=useAuth();
+    let auth=useAuth();
+    let navigate=useNavigate();
+
     return(
         <>
         <div className="Navbar"> 
 <ul>
-  <li>Home</li>
+  <Link className='link' to='/'>
+    <li>Home</li>
+
+  </Link>
    <li>About</li>
    <li>Sitting</li>
+  
 </ul>
 <div className='login'>
  {!auth.user &&(<Link className='link' to="/login">

@@ -16,11 +16,8 @@ function App() {
     <Router>
       <Contextprovider>
     <Routes>
-          <Route path='/' element={<Home/>}/>
-                    <Route path='/login' element={<Login/>}/>
-
-                <Route path='/home' element={<Home/>}/>
-
+      <Route path='/' element={<Home/>}/>
+       <Route path='/login' element={<Login/>}/>
      <Route path='/sign-in' element={<Register/>}/>
      <Route path='/admin' element={<Admin/>}/>
      <Route path='/user' element={<User/>}/>

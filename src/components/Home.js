@@ -2,6 +2,7 @@ import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Homebutton from "./Homebutton"
 export default function Home(){
+  
     return(
         <>
 

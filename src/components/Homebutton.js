@@ -7,7 +7,7 @@ export default function Homebutton(){
     }
     return(
         <>
-        <Link className="link" to="/home">
+        <Link className="link" to="/">
         <button className=" btn goHome">
             Main
         </button>

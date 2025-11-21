@@ -5,11 +5,10 @@ export const Contextprovider=({children})=>{
     const login =(user)=>{
         setUser(user);
     }
-    const logout=()=>{
-        setUser(null);
-    }
+ 
+    
     return(
-        <Authcontext value={{user,login,logout}}>{children}</Authcontext>
+        <Authcontext value={{user,login}}>{children}</Authcontext>
     )
 };
 export const useAuth=()=>{
