@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Routes,Route,Navigate } from 'react-router-dom';
+import Home from './components/Home';
+import Login from './components/Login';
+import Admin from './components/Admin';
+import User from './components/User'
+import Register from './components/Register';
+import { Contextprovider} from './Context/Auth';
+
+  
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className='main'>
+    <Router>
+      <Contextprovider>
+    <Routes>
+          <Route path='/' element={<Home/>}/>
+                    <Route path='/login' element={<Login/>}/>
+
+                <Route path='/home' element={<Home/>}/>
+
+     <Route path='/sign-in' element={<Register/>}/>
+     <Route path='/admin' element={<Admin/>}/>
+     <Route path='/user' element={<User/>}/>
+    </Routes>
+    </Contextprovider>
+    </Router>
+  </div>
+  
   );
 }
 

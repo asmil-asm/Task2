@@ -1,38 +1,305 @@
-.App {
-  text-align: center;
+/* global */
+body{
+  margin: 0;
+  padding: 0;
+}
+.link{
+  color: black;
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
+}
+.main{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+ul{
+  list-style: none;
+   display: flex;  
+  gap:30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul li{
+  cursor:pointer;
+  font-size: 20px;
+
+}
+ul li:hover{
+  color:gray;
+}
+/* Home */
+.text{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left:50%;
+  top:50%;
+
+} .text h1{
+  color: aqua;
+}
+.text p{
+  color:#777;
+  font-size: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar */
+.Navbar{
+     box-shadow: -2px 3px 3px 2px gray;
+     padding: 20px;
+     display:  flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.Navbar .login{
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+.Navbar .login p:hover{
+  color: aqua;
+}
+/* Sidebar */
+.Sidebar{
+       box-shadow: -2px 3px 3px 2px gray;
+background-color: rgba(255, 255, 255, 0.234);
+  height: 100vh;
+  width: 200px;
+  margin-top: 0;
+  display: flex;
+}
+.Sidebar ul{
+  flex-direction: column;
+width: 100%;
+
+}
+.Sidebar ul li{
+  border-bottom: 1px solid #ddd;
+  margin-top: 30px;
+  margin-left: -40px;
+  padding-bottom: 10px;
+}
+/* Button Main */
+.btn{
+  position: absolute;
+padding: 5px 10px;
+cursor: pointer;
+background-color: aqua;
+border: none;
+color: white;
+font-size: 15px;
+bottom:0;
+margin-bottom: 20px;
+}
+.btn:hover{
+  background-color: gray;
+}
+.goHome{
+  right:300px;
+}
+.goBack{
+  left:300px
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+ /* Login */
+.box{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  background-color: white;
+   box-shadow: -2px 3px 3px 2px gray;
+   width: 300px;
+   padding: 20px;
+text-align: center;
+}
+.box h2{
+  color: #777;
+}
+.box form{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  
+}
+.box form label{
+  color: #444;
+  font-size: 15px;
+  font-weight: 700;
+}
+.box form input{
+  padding-top: 5px;
+}
+.box form input:focus{
+  outline: none;
+  border:1px solid aqua;
+}
+.box form .password{
+display: flex;
+justify-content:center;
+align-items: center;
+gap: 5px;
+}
+
+.box form span{
+font-size: 15px;
+cursor: pointer;
+
+
+}
+.submit{
+  padding: 5px;
+  background-color: aqua;
   color: white;
+  border: none;
 }
+.btns{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.btns button{
+  padding: 5px;
+  background-color: aqua;
+  color: white;
+  border: none;
+}
+/* User */
+.user{
+text-align: center;
+padding: 30px;
 
-.App-link {
-  color: #61dafb;
 }
+.user h1{
+color: aqua;
+}
+.user h2{
+  color: #777;
+}
+.user h3{
+  margin-top: 100px;
+  color: #333;
+}
+.user p{
+  color: #666;
+}
+.info{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap:50px;
+}
+.info div{
+  background-color: aqua;
+  cursor: pointer;
+  width: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+    color: white;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
+.skills{
+  display: flex;
+  justify-content: center;
+}
+.skills ul li{
+  background-color: #777;
+  color:white;
+  width: 70px;
+  padding: 10px;
+}
+.skills ul li:hover{
+  background-color: aqua;
+}
+.user .btns{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.user .btns button:hover{
+  background-color: gray;
+}
+/* Admin */
+.admin{
+  padding: 30px;
+  background-color: #eee;
+}
+.admin h1{
+  color: #777;
+}
+.admin h2{
+  color: aqua;
+  margin-top: 100px;
+}
+.admin .boxes{
+  display: flex;
+  flex-direction: column;
+}
+.admin .data .info{
+  background-color: white;
+       box-shadow: -2px 3px 3px 2px gray;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 0;
+padding:0 10px;
+border-radius: 10px;
+border-top: aqua 4px solid;
+transition: 0.3s;
+cursor: pointer;
+}
+.admin .data .info:hover{
+  transform: translateY(-5px);
+}
+.admin .data .info h3{
+  color: aqua;
+  font-size: 25px;
+}
+.admin .data .info p{
+  color: #777;
+  font-size: 20px;
+}
+.admin .Users{
+    background-color: white;
+       box-shadow: -2px 3px 3px 2px gray;
+       margin: 100px auto;
+       padding: 30px;
+
+}
+.admin .Users h3{
+  color:aqua;
+  border-bottom: 1px solid #777;
+  padding: 10px;
+}
+.admin .Users ul {
+  display: flex;
+  flex-direction: column;
+} 
+.admin .Users ul li{
+  display: flex;
+  align-items: center;
+  border-bottom: 2px aqua solid;
+    gap: 30px;
+    cursor:auto;
+
+}
+.admin .Users ul li span{
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin .Users ul li div{
+  color:#777
+} 
+
